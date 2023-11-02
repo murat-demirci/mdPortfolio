@@ -1,0 +1,22 @@
+@import "imports";
+@import "variables";
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: $font-default;
+    color: $color-4;
+    background-color: $black;
+    font-size: $fs-default;
+
+    &::after {
+        margin: 0;
+        padding: 0;
+    }
+
+    &::before {
+        margin: 0;
+        padding: 0;
+    }
+}
