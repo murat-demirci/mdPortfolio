@@ -1,6 +1,10 @@
 @import "imports";
 @import "variables";
 
+* {
+    box-sizing: border-box;
+}
+
 body,
 html {
     margin: 0;

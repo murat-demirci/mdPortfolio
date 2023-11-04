@@ -3,6 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+* {
+  box-sizing: border-box;
+}
+
 body,
 html {
   margin: 0;

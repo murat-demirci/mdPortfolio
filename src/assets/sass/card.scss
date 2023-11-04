@@ -1,0 +1,45 @@
+@import "variables";
+@import "./utils/mixin";
+
+.github-card-container {
+    @include card-base-style($width: 350px, $height: 450px, $right: 150px);
+    z-index: 1;
+
+    .card-container {
+        @include card-style($width: 350px, $height: 450px, $imageUrl: "../images/github.png");
+    }
+    .first-layer {
+        @include first-layer-style($width: 350px, $height: 450px);
+    }
+
+    .second-layer {
+        @include second-layer-style($width: 350px, $height: 450px);
+    }
+
+    &:hover {
+        cursor: pointer;
+        @include set-index($value: 1);
+        @include set-rotateY;
+    }
+}
+
+.linkedin-card-container {
+    @include card-base-style($width: 350px, $height: 450px, $right: 100px);
+
+    .card-container {
+        @include card-style($width: 350px, $height: 450px, $imageUrl: "../images/linkedin.png");
+    }
+    .first-layer {
+        @include first-layer-style($width: 350px, $height: 450px);
+    }
+
+    .second-layer {
+        @include second-layer-style($width: 350px, $height: 450px);
+    }
+
+    &:hover {
+        cursor: pointer;
+        @include set-index($value: 1);
+        @include set-rotateY;
+    }
+}

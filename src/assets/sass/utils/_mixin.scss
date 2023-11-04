@@ -1,0 +1,61 @@
+$index: 0;
+
+@mixin set-index($value: 0) {
+    $index: $value;
+    z-index: $index;
+}
+
+@mixin set-rotateY {
+    transform: rotate3d(0, 0, 1, 10deg);
+}
+
+@mixin card-base-style($width: 350px, $height: 450px, $right: auto, $top: auto) {
+    display: flex;
+    position: absolute;
+    width: $width;
+    height: $height;
+    right: $right;
+    top: $top;
+    transform: rotate3d(0, 0, 0, 10deg);
+    transition: transform 500ms;
+}
+
+@mixin card-style($width: 350px, $height: 450px, $imageUrl: "../../images/linkedin.png") {
+    position: absolute;
+    border: solid 1px $color-4;
+    border-radius: 0.5rem;
+    border-bottom: none;
+    border-right: none;
+    box-shadow: 1px 1px 10px $color-4;
+    background-color: $black;
+    width: $width;
+    height: $height;
+    z-index: 2;
+    background-image: url($imageUrl);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: normal;
+}
+
+@mixin first-layer-style($width: 350px, $height: 450px) {
+    position: absolute;
+    background-color: $color-1;
+    border-radius: 0.5rem;
+    width: $width;
+    height: $height;
+    left: 5px;
+    top: 5px;
+    z-index: 1;
+}
+
+@mixin second-layer-style($width: 350px, $height: 450px) {
+    position: absolute;
+    background-color: $color-2;
+    border-radius: 0.5rem;
+    width: $width;
+    height: $height;
+    left: 10px;
+    top: 10px;
+    z-index: 0;
+}
